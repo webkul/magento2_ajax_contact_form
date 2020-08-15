@@ -30,11 +30,3 @@ now module is properly installed
 # User Guide
 
 For Magento2 AjaxContactForm module's working process follow user guide - https://webkul.com/blog/magento-2-ajax-contact-form/
-
-# Support
-
-Find our support policy - https://store.webkul.com/support.html/
-
-# Refund
-
-Find our refund policy - https://store.webkul.com/refund-policy.html/
