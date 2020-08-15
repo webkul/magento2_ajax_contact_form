@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul contactus js.
+ * @category Webkul
+ * @package Webkul_AjaxContactForm
+ * @author Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license https://store.webkul.com/license.html
+ */
+ -->
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+     <template id="ajaxcontactform_general_contactus_email" label="Ajax Contact Us Form Email Template" file="ajaxcontactform_email_campaign.html" type="html" module="Webkul_AjaxContactForm" area="frontend"/>
+ </config>

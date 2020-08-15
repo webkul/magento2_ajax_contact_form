@@ -1,0 +1,261 @@
+/**
+ * Webkul contactus js.
+ * @category Webkul
+ * @package Webkul_AjaxContactForm
+ * @author Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license https://store.webkul.com/license.html
+ */
+.panel-right {
+    background: none repeat scroll 0 0 #000000;
+    border: 1px solid #111111;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    height: auto;
+    opacity: 0.85;
+    padding: 15px 10px;
+    position: fixed;
+    right: 0;
+    top: 6px;
+    width: 350px;
+-moz-border-radius-topleft: 20px;
+-webkit-border-top-left-radius: 20px;
+-moz-border-radius-bottomleft: 20px;
+-webkit-border-bottom-left-radius: 20px;
+filter: alpha(opacity=85);
+z-index:999;
+
+}
+
+.panel-left {
+    background: none repeat scroll 0 0 #000000;
+    border: 1px solid #111111;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    height: auto;
+    opacity: 0.85;
+    padding: 15px 10px;
+    position: fixed;
+    left: 0;
+    top: 6px;
+    width: 350px;
+-moz-border-radius-topright: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+filter: alpha(opacity=85);
+z-index:999;
+}
+
+
+a.trigger-right{
+   background: url("../image/red-contactus-right.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #3E414A;
+    cursor: pointer;
+    font-size: 11px;
+    height: 40px;
+    opacity: 1;
+    position: fixed;
+    right: 0;
+    top: 6px;
+    width: 140px;
+    z-index:999;
+}
+
+a.trigger-left{
+   background: url("../image/red-contactus-left.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #3E414A;
+    cursor: pointer;
+    font-size: 11px;
+    height: 40px;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 6px;
+    width: 140px;
+    z-index:999;
+}
+
+a.trigger-right:hover, a.trigger-left:hover{
+opacity:0.8;
+}
+
+.cform {
+    margin-left: 15px;
+    width: 330px;
+}
+
+.contact-form strong
+{
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.contact-form
+{
+    margin: 10px 0!important;
+    padding: 0;
+    padding-bottom: 150px;
+}
+
+
+.contact-form p
+{
+    margin: 8px 0 !important;
+}
+
+
+.contact-form p input[type="text"] {
+    background-color: #525461;
+    border: medium none;
+    color: #FFFFFF;
+    height: 26px;
+    padding-left: 4px;
+    width: 260px;
+}
+
+
+.contact-form p textarea
+{
+    padding-left: 4px;
+    background-color: #525461;
+    color: #fff !important;
+    border: none;
+    width: 260px;
+    height: 100px;
+    font-family: Verdana;
+    font-size: 12px !important;
+}
+.contact-form p input[type=submit]:hover{
+opacity:0.8;
+}
+
+.cform .map
+{
+    width: 100%;
+    height: 170px;
+    margin-top: 5px;
+    z-index: 999;
+}
+.address p
+{
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.error{
+color:red;
+margin-left: 70px !important;
+}
+
+.btn-close
+{
+  background-color: #b81721;
+   color: #000000;
+   cursor: pointer;
+   float:right;
+   font-size: 15px;
+   font-weight: bold;
+    height: 21px;
+    text-align: center;
+    width: 85px;
+    opacity: 1;
+    border-radius: 7px;
+    border:4px solid white;
+    margin-bottom: 5px;
+    color:white;
+}
+.sent
+{
+  background-color: #b81721;
+   color: #000000;
+   cursor: pointer;
+   float:right;
+   font-size: 15px;
+   font-weight: bold;
+    height: 29px;
+    text-align: center;
+    width: 85px;
+    opacity: 1;
+    border-radius: 7px;
+    border:4px solid white;
+    margin-bottom: 5px;
+    color:white;
+}
+.btn-close span
+{
+
+}
+.btn-close:hover
+{
+    opacity:0.8;
+}
+
+.contact-form .formtxt {
+    color: #FFFFFF;
+    float: left;
+    height: 25px;
+    line-height: 26px;
+    width: 70px;
+}
+
+#successdata{
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: center !important;
+}
+#map-canvas {
+  min-width: 200px;
+  width: 50%;
+  min-height: 200px;
+  height: 80%;
+  border: 1px solid blue;
+}
+#loader{
+    display:none;
+    float:right;
+    margin:20px 0 0 50px;
+    width:30px;
+    height:10px;
+    position:absolute;
+}
+.wk-loading-mask {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.62);
+    height: 100%;
+    position: absolute!important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.wk-loading-mask-ajax {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.62);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.wk-loader-ajax {
+    background: url("../images/ajax-loader-ajax.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 32px;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+}
+.wk-display-none-ajax {
+    display: none;
+}
+#err_data {
+    color :red;
+}

@@ -1,0 +1,15 @@
+Legend
+
++ Features
+- Bugs
+
+-------------------------------- Version 3.0.0 --------------------------------------
+    + Compatible with Magento 2.3.x
+    - Fixed Few more bugs.
+-------------------------------- Version 2.0.0 --------------------------------------
+	
+	+ Nice Transition Effect.
+	+ Custom Thank You Message.
+	+ Inbuilt Google Map (enable/disable).
+	+ Module has two positions i.e. top-left and top-right.
+	+ User can add any Email ID to get the details from Ajax Contact Form.

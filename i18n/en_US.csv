@@ -1,0 +1,57 @@
+AjaxContactForm,AjaxContactForm
+Designed by Webkul,Designed by Webkul
+Alignment,Alignment
+Select Left or Right,Select Left or Right
+Yes,Yes
+No,No
+Name,Name
+Name to be shown on form,Name to be shown on form
+Address,Address
+Address to be shown on form,Address to be shown on form
+Email,Email
+Email to be shown on form,Email to be shown on form
+Email To,Email To
+Enter here email where you want all mails,Enter here email where you want all mails
+Show Map,Show Map
+select yes or no,select yes or no
+Category Id,Category Id
+Enter message which you want after mail sent.,Enter message which you want after mail sent.
+Map Coordinates,Map Coordinates
+"e.g 28.612027,77.377661","e.g 28.612027,77.377661"
+Show Full Address,Show Full Address
+select yes or no.,select yes or no.
+Load Jquery,Load Jquery
+select yes or no.,select yes or no.
+Please enter your name.,Please enter your name.
+Please enter your subject.,Please enter your subject.
+Please enter your message.,Please enter your message.
+Please enter your email address.,Please enter your email address.
+Enter a valid email address.,Enter a valid email address.
+Ajax Contact Form,Ajax Contact Form
+General Settings,General Settings
+Map Status,Map Status
+Maps API Key,Maps API Key
+Set Default Address,Set Default Address
+Show Email Id on Frontend,Show Email Id on Frontend
+Select Ajax Contact us Email Template,Select Ajax Contact us Email Template
+left,left
+right,right
+Title,Title
+Title to be shown on form.,Title to be shown on form.
+Address to be shown on form.,Address to be shown on form.
+Enter  email id to receive emails .,Enter  email id to receive emails .
+Thank You Message,Thank You Message
+Ajax Contact Us Form Email Template (Default),Ajax Contact Us Form Email Template (Default)
+New Pickup Order,New Pickup Order
+New Pickup Order For Guest,New Pickup Order For Guest
+select Left or Right.,select Left or Right.
+Close,Close
+Contact Form,Contact Form
+Contact Us,Contact Us
+yes,yes
+no,no
+Subject,Subject
+Text here,Text here
+Message,Message
+send,send
+

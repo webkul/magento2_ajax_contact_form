@@ -1,0 +1,138 @@
+<?php
+/**
+ * Webkul software.
+ * @category Webkul
+ * @package Webkul_AjaxContactForm
+ * @author Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license https://store.webkul.com/license.html
+ */
+
+$name=$block->getData('name');
+$alignment=$block->getData('alignment');
+$address=$block->getData('address');
+$email=$block->getData('email_to');
+$email_to=$block->getData('email_to');
+$show_map=$block->getApiVersion();
+$customerName = '';
+$isShowEmail = $block->isShowEmail();
+$customerName = $block->getCustomerName();
+$customerEmail = '';
+$customerEmail = $block->getCustomerEmail();
+if ($show_map == 1) {
+    $api=$block->getApiKey();
+    $map_coordinates = $block->getApiCoordinate();
+    $map_coordinates = explode(',', $map_coordinates);
+}
+$load_jquery=1;
+$show_full_address=$block->getData('show_full_address');
+$thanku_msg=$block->getData('thanku_msg');
+$mail_url=$block->getAssetUrl('Webkul_AjaxContactForm::mail.php');
+$mail_url= $block->getUrl('ajaxcontactform/email/sent', ['_secure' => $block->getRequest()->isSecure()]);
+
+
+
+if ($alignment == 1) {
+          $panelid = "panel-left";
+         $triggerid = "trigger-left";
+} else {
+    $panelid = "panel-right";
+    $triggerid = "trigger-right";
+}
+
+?>
+
+<link href="<?= /* @noEscape */ $block->getAssetUrl('Webkul_AjaxContactForm::css/contactus.css'); ?>" 
+type="text/css" rel="stylesheet" />
+<div class="wk-loading-mask-ajax wk-display-none-ajax" id='wk-loading-mask-ajax'>
+    <div class="wk-loader-ajax"></div>
+</div>
+<div class="<?= /* @noEscape */ $panelid; ?>" style= "display:none;" >
+    <script>
+        function initMap() {
+            <?php if ($show_map == 1): ?>
+            var uluru = {lat: <?= /* @noEscape */ $map_coordinates[0];?>, 
+                lng:<?= /* @noEscape */ $map_coordinates[1];?>};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 2,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        <?php endif; ?>
+        }
+ </script>
+<!--pushup content bar starts here-->
+    <div class="cform">
+        <div class="btn-close"><span><?= /* @noEscape */ __('Close')?></span></div>
+        <?php if ($show_full_address == 1): ?>
+            <div class="address">
+                <p>
+                    <?= /* @noEscape */ $name; ?>
+                    </br>
+                    <?= /* @noEscape */ $address; ?>
+                    </br>
+                    <?php if ($isShowEmail == 1): /* @noEscape */ echo  $email;
+endif; ?>
+                </p>
+            </div>
+        <?php endif; ?>
+        <?php if ($show_map == 1):  ?>
+                <div class="map" id="map"><script async defer
+                    src="<?= /* @noEscape */ "https://maps.googleapis.com/maps/api/js?key=".$api."&callback=initMap"?>">
+                        </script>
+                </div>
+        <?php endif; ?>
+        <div id="successdata" style="display:none;">
+            <span><?= /* @noEscape */ $thanku_msg ?></span>
+        </div>
+        <div id="err_data" class= "wk-display-none-ajax">
+        </div>
+        <div class="contact-form">
+              <form action="" method="post">
+                  <strong>
+                        <?= /* @noEscape */ __('Contact Form')?>
+                  </strong>
+                  <p>
+                      <span class="formtxt"><?= /* @noEscape */ __('Name')?></span>
+                      <input type="text" class="name" name="name" value="<?= /* @noEscape */ $customerName; ?>" 
+                      id="Username" />
+                  </p>
+                  <p>
+                      <span class="formtxt"><?= /* @noEscape */ __('Email')?></span>
+                      <input type="text" class="email" name="email" id="UserEmail" 
+                      value="<?= /* @noEscape */ $customerEmail; ?>" />
+                  </p>
+                  <p>
+                      <span class="formtxt"><?= /* @noEscape */ __('Subject') ?></span>
+                      <input type="text" class="subject" name="subject" id="Usersubject" value="" />
+                  </p>
+                  <p>
+                      <span class="formtxt"><?= /* @noEscape */ __('Message')?></span>
+                      <textarea class="message" id="Usermessage" name="message"></textarea>
+                  </p>
+                  <p class="clear">
+                      <input class="sent" type="submit" value=<?= /* @noEscape */ __('send')?> 
+                      id="btnsubmit" name="Submit" />
+                  </p>
+              </form>
+        </div>
+    </div>
+<!--pushup content bar ends here-->
+</div>
+<a class="<?= /* @noEscape */ $triggerid; ?>" href="#"></a>
+ <script type="text/x-magento-init">
+ {
+     "*": {
+         "ajaxcontactform":
+             {
+               "triggerid":"<?= /* @noEscape */ $triggerid; ?>",
+               "panelid":"<?= /* @noEscape */ $panelid; ?>",
+               "emailto":"<?= /* @noEscape */ $email_to; ?>",
+               "mail_url":"<?= /* @noEscape */ $mail_url; ?>"
+             }
+     }
+ }
+ </script>

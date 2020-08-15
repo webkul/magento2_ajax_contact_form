@@ -1,0 +1,22 @@
+<!--
+/**
+ * @category  Webkul
+ * @package   Webkul_AjaxContactForm
+ * @author    Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+ -->
+ <div class="pp-buttons-container">
+    <input id="autocomplete" type="text" name="groups[general][fields][address][value]" />
+</div>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "autofilladdress": {
+                "googleApiKey":"<?= /* @noEscape */ $block->getGoogleApiKey()?>",
+                "savedAddress":"<?= /* @noEscape */ $block->getSavedAddress()?>"
+            }
+        }
+    }
+</script>
